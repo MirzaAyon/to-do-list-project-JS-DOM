@@ -18,6 +18,26 @@ document.getElementById('add-btn').addEventListener('click', function () {
          </td> `
         mainContainer.appendChild(tableContainer);
         document.getElementById('input-value').value = "";
+        const deleteButton = document.getElementsByClassName('delete-btn')
+        const doneButton = document.getElementsByClassName('done-btn')
+        // console.log(deleteButton); //inspact e dekhbo
 
+        for (const button of deleteButton) {
+            button.addEventListener('click', function (e) {
+                // console.log(e.target.parentNode.parentNode);
+
+                e.target.parentNode.parentNode.style.display = 'none';
+            });
+        }
+        for (const button of doneButton) {
+            button.addEventListener('click', function (e) {
+
+
+                e.target.parentNode.parentNode.style.textDecoration = 'line-through';
+            });
+        }
     }
-})
+});
+//number change kora app2 te dekhbo
+
+
